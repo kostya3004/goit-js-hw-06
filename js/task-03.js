@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+let list = ''
+for (let i = 0; i < images.length; i += 1) {
+  list += `<li><img src="${images[i].url}" alt="${images[i].alt}"></li>`
+}
+const gallery = document.querySelector('.gallery')
+gallery.insertAdjacentHTML('afterbegin', list)
+gallery.style.display = "flex"
+gallery.style.flexDirection = "column"
+gallery.style.alignItems = "center"
+console.log(list)
