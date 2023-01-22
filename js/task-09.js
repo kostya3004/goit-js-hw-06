@@ -5,10 +5,11 @@ function getRandomHexColor() {
 const button = document.querySelector(".change-color")
 const widget = document.querySelector(".widget")
 const colorName = document.querySelector(".color")
+const body = document.querySelector("body")
 
 const changeBcg = () => {
   const tempColor = getRandomHexColor()
-  widget.style.backgroundColor = tempColor
+  body.style.backgroundColor = tempColor
   colorName.textContent = tempColor
 }
 
